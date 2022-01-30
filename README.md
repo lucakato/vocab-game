@@ -1,4 +1,4 @@
-# word-game
+# Vocabulary Study App
 A vocabulary study game built using React on the frontend and Node.js on the backend to make API calls.
 
 
