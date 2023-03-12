@@ -6,11 +6,17 @@ const axios = require('axios')
 const app = express()
 app.use(cors())
 
+// the whole purpose of this file was to hide our API key on the backend
+// we can use .get() from express so that when localhost:8000 was visited, we get the result of API calls
+// frontend makes request through localhost instead
+// this is the backend, the node.js stuff
+
 app.get('/', (req, res) => {
     res.json("Index hi")
 })
 
 app.get('/results', (req, res) => {
+    // get the level that was passed in on front end
     const passedLevel = req.query.level
 
     const options = {
